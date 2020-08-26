@@ -7,12 +7,15 @@
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
                         <div class="card-body">
-                            <h4 class="card-title"><%= appointment.firstname + " " + appointment.lastname %></h4>
-                            <p class="card-text"><%= appointment.phonenumber %></p>
-                            <p class="card-text"><%= appointment.course %></p>
-                            <p class="card-text"><%= appointment.avaliability%></p>
+                            <h4 class="card-title"><%= appointment.firstname + " " + appointment.lastname %></h4> 
+                            <p class="card-text">Phone Number: <%= appointment.phonenumber %></p>
+                            <p class="card-text">Course of Interest: <%= appointment.course %></p>
+                            <p class="card-text">Avaliability: <%= appointment.avaliability%></p>
                             <div class="d-flex justify-content-between align-items-center">
                             </div>
+                            <form action="/app/<%=appointment.id %>?_method=DELETE" method="POST" class="d-inline">
+                                <button type="submit" class="btn btn-danger">Done</button>
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,6 @@
 const express = require('express')
 const Course = require('../models/course')
 const Appointment = require('../models/appointment')
-const appointment = require('../models/appointment')
 const router = express.Router()
 
 
@@ -41,6 +40,11 @@ router.post('/', async (req, res, next) => {
     }
 })
 
+
+router.delete('/:id', async (req, res) => {
+  await Appointment.findByIdAndDelete(req.params.id)
+  res.redirect('/app/admin')
+})
 
   
 module.exports = router
