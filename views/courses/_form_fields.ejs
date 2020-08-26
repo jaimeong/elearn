@@ -1,0 +1,38 @@
+<div class="form-group">
+    <label for="title">Title</label>
+    <input required value="<%= course.title %>" type="text" name="title" id="title" class="form-control">
+</div>
+<div class="form-group">
+    <label for="headline">Headline</label>
+    <textarea name="headline" id="headline" class="form-control"><%= course.headline %></textarea>
+</div>
+<div class="form-group">
+    <label for="desc1">Description 1</label>
+    <textarea name="desc1" id="desc1" class="form-control"><%= course.desc1 %></textarea>
+</div>
+<div class="form-group">
+    <label for="desc2">Description 2</label>
+    <textarea name="desc2" id="desc2" class="form-control"><%= course.desc2 %></textarea>
+</div>
+<div class="form-group">
+    <label for="desc3">Description 3</label>
+    <textarea name="desc3" id="desc3" class="form-control"><%= course.desc3 %></textarea>
+</div>
+<div class="form-group">
+    <label for="pic1">Picture Link 1</label>
+    <textarea required name="pic1" id="pic1" class="form-control"><%= course.pic1 %></textarea>
+</div>
+<div class="form-group">
+    <label for="pic2">Picture Link 2</label>
+    <textarea required name="pic2" id="pic2" class="form-control"><%= course.pic2 %></textarea>
+</div>
+<div class="form-group">
+    <label for="pic2">Picture Link 3</label>
+    <textarea required name="pic3" id="pic3" class="form-control"><%= course.pic3 %></textarea>
+</div>
+<div class="form-group">
+    <label for="video">Video</label>
+    <textarea required name="video" id="video" class="form-control"><%= course.video %></textarea>
+</div>
+<a href="/" class="btn btn-secondary">Cancel</a>
+<button type="submit" class="btn btn-primary">Save</button>

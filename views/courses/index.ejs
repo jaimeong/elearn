@@ -1,0 +1,58 @@
+<%- include('_header.ejs') %>
+
+
+    <!-- <div class="container"> -->
+        <div class="jumbotron mb-5" style="text-align: center;">
+            
+            <h1 class="display-4"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d02c1dfc-6844-477f-8d0a-13384b453d8f/d1mbeu5-0c9c50be-3484-4bb8-b971-2090e2a6e1e3.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi9kMDJjMWRmYy02ODQ0LTQ3N2YtOGQwYS0xMzM4NGI0NTNkOGYvZDFtYmV1NS0wYzljNTBiZS0zNDg0LTRiYjgtYjk3MS0yMDkwZTJhNmUxZTMucG5nIn1dXX0.4yLmIYrmslhKYTFLPSYLhcX1NJ2Zey-9dH079P3NRtg">
+            </img>Coding Slimes</h1>
+            <p class="lead" style="margin: 3rem;">
+                Browse our selection of courses taught by world-class experts in their field. Click on a course for more information, or set up a FREE trial class today!
+                Quadruple Parallel Universes (QPU) is a term used by pannenkoek2012 in the video to describe the set of four PU that are needed to actually travel to a 
+                parallel universe (as the engine checks the hitboxes for errors 4 times during a movement). If Mario ends up out of bounds before he goes the full distance, 
+                the game cuts his movement short, aligning him incorrectly between QPUs. "Misalignments" make it much more difficult to return to the original level, putting Mario into a limbo of sorts. 
+                Because of this, the term has become an in-joke describing something negative, frightening, or frustrating.
+            </p>
+            <hr class="my-4">
+            <p style="margin: 3rem;">
+                Here at Coding Slimes, we think that programming should be fun! In exchange for 25 slime goops, we'll teach you how to program!
+                Not only will you be using industry standard weapons and software, slime goop is good for the skin! We have served over 9000
+                satisfied adventurers and are based in dungeons of all skill levels. "SM64 – Watch for Rolling Rocks – 0.5x A Presses" is a viral video uploaded by the Super Mario 64 glitch exploiter pannenkoek2012, 
+                where he obtains one of the game's stars through tool-assisted superplay (TAS). After the narrated version of the video was released, it went viral on 4chan's video game board /v/ due to the complex 
+                nature of its analysis, as well as the narrator's peculiar wordings and phrasings, most notably "But First, We Need to Talk About Parallel Universes".
+            </p>
+            <p class="lead" >
+            <a class="btn btn-primary btn-lg" href="/app/schedule" role="button">Schedule a FREE class</a>
+            </p>
+        </div>
+    <!-- </div> -->
+
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <% courses.forEach(course => { %>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                                <a href="courses/<%=course.slug%>">
+                                    <img class="card-img-top" src="<%= course.pic1 %>" alt="Card image cap">
+                                </a>
+                        <!-- <img class="card-img-top" src="<%= course.pic1 %>" alt="Card image cap"> -->
+                        <div class="card-body">
+                            <h4 class="card-title"><%= course.title %></h4>
+                            <p class="card-text"><%= course.headline %></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="courses/<%=course.slug%>" class="btn btn-primary">
+                                    View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include('_footer.ejs') %>
+</html>
