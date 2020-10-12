@@ -14,6 +14,6 @@ Each individual course end point has been generated using EJS to query a cloud M
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas), A cloud MongoDB service
   - [Mongo DB](https://www.mongodb.com/), a general purpose, document-based, distrubted database. NoSQL.
 - [Node.js](https://nodejs.org/en/), Of course, the Javascript runtime built on Chrome's V8 Javascript engine; what makes it all possible
--[Express](https://expressjs.com/), a fast, minimalist web framework for Node.js
+- [Express](https://expressjs.com/), a fast, minimalist web framework for Node.js
 
 
